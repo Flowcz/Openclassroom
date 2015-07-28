@@ -23,7 +23,7 @@ while ( $donnees = $reponse->fetch()) {
 	echo '<p>'.$donnees['ID'].' '.$donnees['nom'].' '.$donnees['texte'].'</p>';
 }
 // provoquer la « fermeture du curseur d'analyse des résultats »
-$reponse->closeCursor();
+$reponse->closeCursor(); 
 
 ?>
 
