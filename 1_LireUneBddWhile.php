@@ -1,3 +1,4 @@
+ 
 <?php
 try
 {
@@ -18,7 +19,7 @@ $reponse = $bdd -> query('SELECT * FROM testopenclass');
 	// traducton de la table en resultat
 
 while ( $donnees = $reponse->fetch()) {
-	echo '<p>'.$donnees['nom'].'</p>';
+	echo '<p>'.$donnees['ID'].' '.$donnees['nom'].' '.$donnees['texte'].'</p>';
 }
 
 
