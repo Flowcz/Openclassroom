@@ -16,12 +16,13 @@ catch (Exception $e)
 }
 	// lecture et selection de notre table TESTOPENCLASS
 $reponse = $bdd -> query('SELECT * FROM testopenclass');
-	// traducton de la table en resultat
-
+	
+	// traducton et analyse de la table en resultat
 while ( $donnees = $reponse->fetch()) {
-	echo '<p>'.$donnees['ID'].' '.$donnees['nom'].' '.$donnees['texte'].'</p>';
+	echo '<p>'.$donnees[$_GET['nom']].' '.$donnees['texte'].'</p>';
 }
-
+// provoquer la « fermeture du curseur d'analyse des résultats »
 $reponse->closeCursor();
 
 ?>
+
