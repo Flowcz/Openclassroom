@@ -22,5 +22,6 @@ while ( $donnees = $reponse->fetch()) {
 	echo '<p>'.$donnees['ID'].' '.$donnees['nom'].' '.$donnees['texte'].'</p>';
 }
 
+$reponse->closeCursor();
 
 ?>
