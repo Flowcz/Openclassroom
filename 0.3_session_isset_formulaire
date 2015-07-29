@@ -1,1 +1,43 @@
+<!-- Fichier formulaire.php -->
+<?php 
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="session.php" method="get">
+<?php 
+if ((isset($_SESSION['prenom'])) && (!empty($_SESSION['prenom']))) {
+echo $_SESSION['prenom'];
+	}
+	else {
+		echo "<input type=\"text\" name=\"nom\" >";
+	}
+?>
+	<input type="text" name="prenom" placeholder="prenom">
+	<input type="submit">
+	<input type="reset">
+</form>
 
+</body>
+</html>
+
+<!-- session.php -->
+<?php 	
+session_start();
+
+	$_SESSION['prenom'] = $_GET['prenom'];
+	$_SESSION['nom'] = $_GET['nom'];
+
+	if ((isset($_SESSION['prenom'])) && (!empty($_SESSION['prenom'])) && (!empty($_SESSION['nom'])) && (!empty($_SESSION['nom'])) ) {
+
+		header('Location: formulairesession.php');
+	}
+	else {
+		echo "Affichage raté";
+	}
+
+ ?>
