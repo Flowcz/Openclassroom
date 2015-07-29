@@ -1,0 +1,19 @@
+<?php 	
+session_start();
+
+	$_SESSION['prenom'] = 'test';
+
+	if ((isset($_SESSION['prenom'])) && (!empty($_SESSION['prenom']))) {
+
+		echo "Affiche 'TEst' reussi";
+
+	}
+	else {
+		echo "Affichage raté";
+	}
+
+
+
+echo $_SESSION['prenom'];
+
+ ?>
