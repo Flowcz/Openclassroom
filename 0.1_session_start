@@ -1,0 +1,11 @@
+// affche a variable test
+
+<?php 	
+session_start();
+
+	$_SESSION['prenom'] = 'test';
+
+echo $_SESSION['prenom'];
+
+ ?>
+ 
